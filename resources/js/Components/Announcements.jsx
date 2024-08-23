@@ -1,6 +1,24 @@
 import React, { useState, useEffect } from 'react';
 
 export default function Announcements() {
+    const [data, setData] = useState([]);
+
+    // fetch data from api
+    useEffect(() => {
+        fetch('/api/announcements')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('error');
+                }
+
+                return response.json();
+            })
+            // success: set data to state
+            .then(data => setData(data))
+            .catch(error => console.error('error:', error));
+    }, []);
+
+
     return (
         <div>
             <table border="1">
