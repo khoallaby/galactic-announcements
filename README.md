@@ -1,5 +1,16 @@
 # Galatic Advisors - Announcements
 
+Hello team Galactic!
+
+I was able to complete most of the requirements except I ran out of time implementing the pagination logic. 
+
+I did get it working on the api side (see commented code in [routes/api.php](routes/api.php)) But not the React side.
+
+Let me know how it looks!
+
+---
+
+
 ## System Requirements
 - [PHP](https://www.php.net/downloads.php) >= 8.2
 - [Node JS](https://nodejs.org) >= 16.0
