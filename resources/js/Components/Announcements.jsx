@@ -47,7 +47,12 @@ export default function Announcements() {
                     <p className="mb-3 text-gray-700">
                         <Markdown remarkPlugins={[remarkGfm]}>{item.body}</Markdown>
                     </p>
-                    <p className="mb-3 text-black text-xs">{dateReadable(item.date)}</p>
+                    <time
+                        className="mb-3 text-black text-xs"
+                        dateTime={item.date}
+                    >
+                        {dateReadable(item.date)}
+                    </time>
                 </article>
             ))}
         </>
