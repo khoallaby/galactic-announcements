@@ -18,6 +18,21 @@ export default function Announcements() {
             .catch(error => console.error('error:', error));
     }, []);
 
+    const dateReadable = (dateString) => {
+        const date = new Date(dateString);
+
+        // Convert the date to a readable format
+        return date.toLocaleString('en-US', {
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric',
+            hour: '2-digit',
+            minute: '2-digit',
+            second: '2-digit',
+            hour12: true
+        });
+
+    }
 
     return (
         <>
@@ -28,7 +43,7 @@ export default function Announcements() {
                 >
                     <h2 className="mb-2 text-2xl font-bold text-black">{item.author}</h2>
                     <p className="mb-3 text-gray-700">{item.body}</p>
-                    <p className="mb-3 text-black text-xs">{item.date}</p>
+                    <p className="mb-3 text-black text-xs">{dateReadable(item.date)}</p>
                 </article>
             ))}
         </>
