@@ -20,25 +20,17 @@ export default function Announcements() {
 
 
     return (
-        <div>
-            <table border="1">
-                <thead>
-                <tr>
-                    <th>Author</th>
-                    <th>Body</th>
-                    <th>Date</th>
-                </tr>
-                </thead>
-                <tbody>
-                    {data.map((item, index) => (
-                        <tr key={index}>
-                            <td>{item.author}</td>
-                            <td>{item.body}</td>
-                            <td>{item.date}</td>
-                        </tr>
-                    ))}
-                </tbody>
-            </table>
-        </div>
+        <>
+            {data.map((item, index) => (
+                <article
+                    className="mb-2 p-6 border rounded border-gray-200 shadow"
+                    key={index}
+                >
+                    <h2 className="mb-2 text-2xl font-bold text-black">{item.author}</h2>
+                    <p className="mb-3 text-gray-700">{item.body}</p>
+                    <p className="mb-3 text-black text-xs">{item.date}</p>
+                </article>
+            ))}
+        </>
     );
 }
