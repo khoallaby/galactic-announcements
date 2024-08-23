@@ -44,9 +44,9 @@ export default function Announcements() {
                     key={index}
                 >
                     <h2 className="mb-2 text-2xl font-bold text-black">{item.author}</h2>
-                    <p className="mb-3 text-gray-700">
+                    <div className="mb-3 text-gray-700">
                         <Markdown remarkPlugins={[remarkGfm]}>{item.body}</Markdown>
-                    </p>
+                    </div>
                     <time
                         className="mb-3 text-black text-xs"
                         dateTime={item.date}
