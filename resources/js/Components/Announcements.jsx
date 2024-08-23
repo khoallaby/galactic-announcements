@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import Markdown from 'react-markdown'
+import remarkGfm from 'remark-gfm'
 
 export default function Announcements() {
     const [data, setData] = useState([]);
@@ -42,7 +44,9 @@ export default function Announcements() {
                     key={index}
                 >
                     <h2 className="mb-2 text-2xl font-bold text-black">{item.author}</h2>
-                    <p className="mb-3 text-gray-700">{item.body}</p>
+                    <p className="mb-3 text-gray-700">
+                        <Markdown remarkPlugins={[remarkGfm]}>{item.body}</Markdown>
+                    </p>
                     <p className="mb-3 text-black text-xs">{dateReadable(item.date)}</p>
                 </article>
             ))}

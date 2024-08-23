@@ -2,7 +2,7 @@
   {
     "author": "Ochoa Lloyd",
     "date": "2021-02-25T07:25:25",
-      "body": "## Header. \n- list 1\n- list 2\n- list 3\n- list 4\n\n[google link](https://google.com)"
+      "body": "## Header. \n- list 1\n- _list 2 - italic_\n- **list 3 - bold**\n- list 4\n\n[google link](https://google.com)"
 
   },
   {
