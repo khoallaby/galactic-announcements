@@ -7,22 +7,32 @@
 
 ## Installation
 
+1. Install the dependencies
 ```
 composer install
 npm install
+npm run build
+```
+
+2. Set up the .env file
+```
+cp .env.example .env
+php artisan key:generate
 ```
 
 ## Running the application
 
-Run the PHP laravel server in 1 terminal window
+1. Run the PHP laravel server in 1 terminal window
 ```
 php artisan serve
 ```
 
-And run Vite (compiler) in a separate terminal window
+2. And run Vite (compiler) in a separate terminal window
 ```
 npm run dev
 ```
+
+3. Now open up [http://localhost:8000](http://localhost:8000) to view the app
 
 
 
